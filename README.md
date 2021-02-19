@@ -1,5 +1,5 @@
 # Using `launchd` MacOS
-A simple example for setting periodic automated task on MacOS .
+A simple example for setting periodic automated task on MacOS using launchctl.
 
 Based on: 
 * https://www.splinter.com.au/using-launchd-to-run-a-script-every-5-mins-on/
