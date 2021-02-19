@@ -1,5 +1,7 @@
-# Simple Example of setting periodic automated task on MacOS 
-based on: 
+# Using `launchd` MacOS
+A simple example for setting periodic automated task on MacOS .
+
+Based on: 
 * https://www.splinter.com.au/using-launchd-to-run-a-script-every-5-mins-on/
 * https://www.launchd.info/
 
@@ -53,9 +55,8 @@ Copy the task with `launchd`.
 
 First, copy it into your `LaunchDaemons` folder, or `LaunchAgents` if you want it to only run when you’re logged in.
 
-maybe with `sudo`
 ```
-cp com.jacobfeatures.datetofile.plist /Library/LaunchDaemons
+sudo cp com.jacobfeatures.datetofile.plist /Library/LaunchDaemons
 
 ```
 
@@ -69,8 +70,7 @@ Check it is working `launchctl list | grep com.jacobfeatures.datetofile.plist`
 ## Disabling
 To disable, unload (as it is probably loaded and running) and remove. 
 
-maybe with `sudo`
 ```
 launchctl unload -w /Library/LaunchDaemons/com.jacobfeatures.datetofile.plist
-rm /Library/LaunchDaemons/com.jacobfeatures.datetofile.plist
+sudo rm /Library/LaunchDaemons/com.jacobfeatures.datetofile.plist
 ```
