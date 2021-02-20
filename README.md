@@ -11,7 +11,7 @@ Example: Add date and time to a file (simple shell script)
 
 script: `myTask.sh`
 
-## 1.Make script exacutable
+## 1.Make script exactable
 `chmod a+x myTask.sh`
 
 ## 2.Make a plist file
@@ -74,3 +74,8 @@ To disable, unload (as it is probably loaded and running) and remove.
 launchctl unload -w /Library/LaunchDaemons/com.jacobfeatures.datetofile.plist
 sudo rm /Library/LaunchDaemons/com.jacobfeatures.datetofile.plist
 ```
+
+## Troubleshooting
+The `.sh` script that is being run should use full paths (not relative).
+
+eg. `python3` is not good enough `Library/Frameworks/Python.framework/Versions/3.8/bin/python3` should be used instead. 
